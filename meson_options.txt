@@ -1,0 +1,5 @@
+option('SML_BUILD_BENCHMARKS', type : 'boolean', value : false, description : 'Build benchmarks')
+option('SML_BUILD_DOCS', type : 'boolean', value : false, description : 'Build docs')
+option('SML_BUILD_EXAMPLES', type : 'boolean', value : false, description : 'Build examples')
+option('SML_BUILD_TESTS', type : 'boolean', value : false, description : 'Build tests')
+option('SML_USE_EXCEPTIONS', type : 'boolean', value : false, description : 'Do not disable exceptions')
