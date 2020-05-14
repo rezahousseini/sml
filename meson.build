@@ -4,7 +4,13 @@ project('boost_sml', 'cpp',
   default_options : ['warning_level=3', 'cpp_std=c++14']
 )
 
-boost_dep = dependency('boost')
+if meson.is_cross_build()
+  cxx = meson.get_compiler('cpp')
+  boost_inc = include_directories(meson.get_cross_property('boost_includedir'))
+  boost_dep = declare_dependency(include_directories : boost_inc)
+else
+  boost_dep = dependency('boost')
+endif
 
 boost_sml_dep = declare_dependency(
   include_directories: include_directories('include'),
