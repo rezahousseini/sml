@@ -1,7 +1,6 @@
 project('boost_sml', 'cpp', 
-  version: '1.1.0',
   license: 'boost',
-  default_options : ['warning_level=3', 'cpp_std=c++14']
+  default_options : ['warning_level=0', 'cpp_std=c++14']
 )
 
 boost_sml_dep = declare_dependency(
